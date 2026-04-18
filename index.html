@@ -99,14 +99,17 @@ function showLoveResponse() {
 function showFriendResponse() {
     fadeOut(bgMusic);
 
+    boomMusic.currentTime = 0;
+    boomMusic.volume = 0.6;   // softer vibe for this path
+    boomMusic.play();
+
     mainContent.innerHTML = `
         <div style="height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;">
             <h1 style="color:white;">Sorry Love</h1>
             <h1 style="color:white;">You already are my Shine and my smile ❤️</h1>
         </div>
     `;
-}
-    
+}    
 // 4. NO Button Click
 noBtn.addEventListener("click", showLoveResponse);
 
